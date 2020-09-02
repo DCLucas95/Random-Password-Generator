@@ -22,6 +22,7 @@ function generatePassword() {
   //loop for no selections
   while (confirmednumericCharacters == false && confirmeduppercasedCharacters == false && confirmeduppercasedCharacters == false && confirmedspecialCharacters == false) {
     alert("You must select at least one option")
+    var confirmLength = (prompt('How many characters would you like to have in your password? (Password must be between 8 and 128 characters)'));
     var confirmednumericCharacters = confirm("Click ok to add numbers to your password");
     var confirmeduppercasedCharacters = confirm("Click ok to add upper case letters to your password");
     var confirmedlowerCasesCharacters = confirm("Click ok to add lower case letters to your password");
