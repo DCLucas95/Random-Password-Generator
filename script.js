@@ -19,36 +19,27 @@ function generatePassword() {
   var confirmedlowerCasesCharacters = confirm("Click ok to add lower case letters to your password");
   var confirmedspecialCharacters = confirm("Click ok to add special characters to your password");
 
-  //loop for no selections
-  while (confirmednumericCharacters == false && confirmeduppercasedCharacters == false && confirmeduppercasedCharacters == false && confirmedspecialCharacters == false) {
-    alert("You must select at least one option")
-    var confirmLength = (prompt('How many characters would you like to have in your password? (Password must be between 8 and 128 characters)'));
-    var confirmednumericCharacters = confirm("Click ok to add numbers to your password");
-    var confirmeduppercasedCharacters = confirm("Click ok to add upper case letters to your password");
-    var confirmedlowerCasesCharacters = confirm("Click ok to add lower case letters to your password");
-    var confirmedspecialCharacters = confirm("Click ok to add special characters to your password");
-  }
-
   //selections
   if (confirmednumericCharacters == true) {
     allowedCharacters = allowedCharacters.concat(numericCharacters)
   }
-  //else {}
 
   if (confirmeduppercasedCharacters == true) {
     allowedCharacters = allowedCharacters.concat(upperCasedCharacters)
   }
-  //else {}
 
   if (confirmedlowerCasesCharacters == true) {
     allowedCharacters = allowedCharacters.concat(lowerCasedCharacters)
   }
-  //else{}
 
   if (confirmedspecialCharacters == true) {
     allowedCharacters = allowedCharacters.concat(specialCharacters)
   }
-  //else{}
+
+  //loop for no selections
+  if (confirmednumericCharacters == false && confirmeduppercasedCharacters == false && confirmeduppercasedCharacters == false && confirmedspecialCharacters == false) {
+    alert("You must select at least one option")
+  }
 
   console.log(allowedCharacters)
 
