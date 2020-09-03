@@ -36,7 +36,7 @@ function generatePassword() {
     allowedCharacters = allowedCharacters.concat(specialCharacters)
   }
 
-  //loop for no selections
+  //no selections
   if (confirmednumericCharacters == false && confirmeduppercasedCharacters == false && confirmeduppercasedCharacters == false && confirmedspecialCharacters == false) {
     alert("You must select at least one option")
   }
